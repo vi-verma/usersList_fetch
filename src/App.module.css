@@ -1,10 +1,15 @@
 
 .App {
-  background-color: #282c34;
+  background-color: #a2c5be9d;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
+ 
+}
+.bti{
+  display: inline-flex;
+  margin: 10px;
 }
 

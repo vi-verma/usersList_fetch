@@ -5,7 +5,7 @@ function UserFetch(props){
 console.log(props)
     const DataFetch = async () => {
         try{
-            const response = await fetch(`https://reqres.in/api/users?page=${props.pageIndex}` ,{
+            const response = await fetch(`https://reqres.in/api/users?page=${props.pageIndex.index || 1}` ,{
                 method: 'GET',
                 headers: {
                     'Content-Type':'Application/json'
@@ -16,6 +16,9 @@ console.log(props)
                 const Data = await response.json();
                 // console.log(Data.data)
                 props.setUsers(Data.data)
+                console.log(Data.total_pages,"fetcho")
+                props.setPageIndex({...props.pageIndex, total:Data.total_pages})
+                console.log(props.pageIndex, "fetchm")
             }
             catch(err){
                 alert(err);
@@ -26,7 +29,7 @@ console.log(props)
     }; 
     useEffect(() => {
         DataFetch()
-    },[props.pageIndex])
+    },[props.pageIndex.index])
     
 
     return(

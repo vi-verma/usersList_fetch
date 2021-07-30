@@ -1,6 +1,38 @@
-.user_table{
-    background-color: rgba(0, 0, 0, 0.459);
+.header{
+    color: #2b2a29;
+    margin-bottom: 3%;
+    margin-left: 2rem;
+
 }
+
 .list{
     list-style: none;
+    color: gray;
+} 
+.user{
+    margin-bottom: 3%;
+}
+.image{
+    display: inline;
+    position: relative;
+    margin-right: 4%;
+} 
+.image img{
+    border-radius: 30px;
+}  
+.user_name{
+    color: rgb(67, 194, 199);
+    font-weight: 500;
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+}
+.email{
+    color: gray;
+    /* display: inline-block;
+    position: relative; */
+}.bind{
+    display: inline-block;
+    position: relative;
+
 }
